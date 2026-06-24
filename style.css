@@ -1,0 +1,116 @@
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: #a3b8cc; /* Макетиңиздеги көгүш фон */
+    min-height: 100vh;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Карточкаларды тизүүчү башкы блок */
+.container {
+    display: flex;
+    flex-direction: column; /* Карточкалар бири-биринин үстүнө вертикалдуу турат */
+    gap: 30px;
+    width: 100%;
+    max-width: 900px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ак карточкалардын жалпы стили */
+.card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 400px; /* Карточканын туурасы */
+    padding: 40px 30px;
+    border-radius: 32px; /* Жумшак тегеректелген бурчтар */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+    text-align: center;
+}
+
+.name {
+    font-size: 26px;
+    color: #0f172a;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.role {
+    font-size: 15px;
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+.section {
+    margin-bottom: 28px;
+}
+
+.section-title {
+    font-size: 13px;
+    color: #475569;
+    letter-spacing: 1.5px;
+    margin-bottom: 14px;
+    font-weight: 700;
+}
+
+/* Хоббилердин стили */
+.tags {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.tag {
+    background: #f1f5f9;
+    color: #334155;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Байланыш баскычтары */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn {
+    display: block;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 16px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.phone-btn {
+    background: #4f46e5; /* Көк түстөгү баскыч */
+    color: white;
+}
+
+.email-btn {
+    background: transparent;
+    color: #475569;
+}
+
+/* 📱 МОБИЛДИК ТЕЛЕФОНДОР ҮЧҮН (Эки экранды ылдый карай бөлүү) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Эми карточкалар капталга эмес, ИРЕТИ МЕНЕН ЫЛДЫЙ ТҮШӨТ */
+        align-items: center;
+    }
+    
+    .card {
+        max-width: 100%; /* Телефондун экранына толук ылайыкташат */
+    }
+}
